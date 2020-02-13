@@ -1,6 +1,6 @@
 # Information
 
-You can use only if you have two version of alembic in your database. 
+You can use only if you have two versions of alembic in your database. 
 You can verify with this command : 
 ```console
 foo@bar:~$ sudo -u postgres psql asterisk -c "select * from alembic_version"

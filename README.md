@@ -1,6 +1,6 @@
 # Information
 
-You can use unically if you have to version of alembic in your database. 
+You can use only if you have to version of alembic in your database. 
 You can verify with this command : 
 ```console
 foo@bar:~$ sudo -u postgres psql asterisk -c "select * from alembic_version"

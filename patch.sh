@@ -21,8 +21,8 @@ echo "Quickfix over duplicate row in alembic_version_webhookd"
   sudo -u postgres psql asterisk -c "delete from alembic_version_webhookd where version_num='$VERSION_WEBHOOKD'";
   sudo -u postgres psql asterisk -c "insert into alembic_version_webhookd (version_num) values ('$VERSION_WEBHOOKD');";
 echo "Quickfix alembic_version_webhookd end"
-echo "Quickfix over duplicate row in chatd_alembic_version_pkc"
-  VERSION_CHATD=$(sudo -u postgres psql asterisk -c "select * from chatd_alembic_version_pkc" -tA | uniq)
-  sudo -u postgres psql asterisk -c "delete from chatd_alembic_version_pkc where version_num='$VERSION_CHATD'";
-  sudo -u postgres psql asterisk -c "insert into chatd_alembic_version_pkc (version_num) values ('$VERSION_CHATD');";
-echo "Quickfix chatd_alembic_version_pkc end"
+echo "Quickfix over duplicate row in chatd_alembic_version"
+  VERSION_CHATD=$(sudo -u postgres psql asterisk -c "select * from chatd_alembic_version" -tA | uniq)
+  sudo -u postgres psql asterisk -c "delete from chatd_alembic_version where version_num='$VERSION_CHATD'";
+  sudo -u postgres psql asterisk -c "insert into chatd_alembic_version (version_num) values ('$VERSION_CHATD');";
+echo "Quickfix chatd_alembic_version end"
